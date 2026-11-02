@@ -1,0 +1,55 @@
+========================================
+DIRECT + SST TRAINING
+========================================
+Node: ixb4
+Start: Thu Oct 29 22:14:58 UTC 2026
+
+Thu Oct 29 22:14:58 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.178.04             Driver Version: 580.178.04     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA B200                    On  |   00000000:D1:00.0 Off |                    0 |
+| N/A   45C    P0            204W / 1000W |       0MiB / 183359MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+
+============================================================================
+DIRECT / CHL-A FLOW-MATCHING TRAINING
+============================================================================
+Device: cuda
+GPU: NVIDIA B200
+CUDA memory: 178.4 GB
+AMP: False
+Processed dir: /shared/home/dimitar.nakov/MasterT/MastersThesis/data/processed
+Model dir: /shared/home/dimitar.nakov/MasterT/MastersThesis/models/direct_sst_bbp443
+Batch size: 1
+Epochs: 200
+Learning rate: 0.0001
+AdamW betas: (0.9, 0.95)
+Weight decay: 0.0001
+Warm-up epochs: 20
+Min LR: 1e-08
+Auxiliary mode: sst_bbp443
+Auxiliary channels: 4
+
+Train samples: 99,368
+Validation samples: 11,695
+Normalization: mean=-2.563137, std=0.799484
+
+Trainable parameters: 101,539,969
+DIRECT input channels: 16
+
+
+Finished: Thu Oct 29 22:15:13 UTC 2026

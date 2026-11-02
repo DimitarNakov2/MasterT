@@ -1,0 +1,90 @@
+========================================
+DIRECT + SST TRAINING
+========================================
+Node: ixb4
+Start: Thu Oct 29 22:57:13 UTC 2026
+
+Thu Oct 29 22:57:13 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.178.04             Driver Version: 580.178.04     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA B200                    On  |   00000000:1B:00.0 Off |                    0 |
+| N/A   34C    P0            195W / 1000W |       0MiB / 183359MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+
+============================================================================
+DIRECT / CHL-A FLOW-MATCHING TRAINING
+============================================================================
+Device: cuda
+GPU: NVIDIA B200
+CUDA memory: 178.4 GB
+AMP: False
+Processed dir: /shared/home/dimitar.nakov/MasterT/MastersThesis/data/processed
+Model dir: /shared/home/dimitar.nakov/MasterT/MastersThesis/models/direct_sst_bbp443
+Batch size: 1
+Epochs: 200
+Learning rate: 0.0001
+AdamW betas: (0.9, 0.95)
+Weight decay: 0.0001
+Warm-up epochs: 20
+Min LR: 1e-08
+Auxiliary mode: sst_bbp443
+Auxiliary channels: 4
+
+Train samples: 99,368
+Validation samples: 11,695
+Normalization: mean=-2.563137, std=0.799484
+
+Trainable parameters: 101,539,969
+DIRECT input channels: 16
+
+Auxiliary context shape: (1, 4, 128, 128)
+Preflight output: (1, 1, 128, 128) finite=True
+
+
+============================================================================
+Epoch 001/200
+============================================================================
+Learning rate: 5e-06
+    Train batch 500/99,368 | flow loss: 0.435950 | hidden flow: 1.219342 | valid px: 852 | avg: 0.043s
+    Train batch 1,000/99,368 | flow loss: 0.290414 | hidden flow: 0.360482 | valid px: 7,607 | avg: 0.042s
+    Train batch 1,500/99,368 | flow loss: 0.099839 | hidden flow: 0.681234 | valid px: 5,230 | avg: 0.041s
+    Train batch 2,000/99,368 | flow loss: 0.212463 | hidden flow: 0.368836 | valid px: 1,814 | avg: 0.041s
+    Train batch 2,500/99,368 | flow loss: 0.018478 | hidden flow: 1.014263 | valid px: 14,100 | avg: 0.041s
+    Train batch 3,000/99,368 | flow loss: 0.007813 | hidden flow: 0.067057 | valid px: 7,896 | avg: 0.041s
+    Train batch 3,500/99,368 | flow loss: 0.009843 | hidden flow: 0.247089 | valid px: 12,203 | avg: 0.042s
+    Train batch 4,000/99,368 | flow loss: 0.148409 | hidden flow: 0.935659 | valid px: 1,359 | avg: 0.041s
+    Train batch 4,500/99,368 | flow loss: 0.052304 | hidden flow: 0.052304 | valid px: 16,384 | avg: 0.041s
+    Train batch 5,000/99,368 | flow loss: 0.041829 | hidden flow: 0.041829 | valid px: 4,965 | avg: 0.041s
+    Train batch 5,500/99,368 | flow loss: 0.353557 | hidden flow: 0.394116 | valid px: 2,360 | avg: 0.041s
+    Train batch 6,000/99,368 | flow loss: 0.170619 | hidden flow: 0.684920 | valid px: 14,472 | avg: 0.041s
+    Train batch 6,500/99,368 | flow loss: 0.004447 | hidden flow: 0.042753 | valid px: 5,112 | avg: 0.041s
+    Train batch 7,000/99,368 | flow loss: 0.040450 | hidden flow: 0.086945 | valid px: 16,301 | avg: 0.041s
+    Train batch 7,500/99,368 | flow loss: 0.015611 | hidden flow: 0.354268 | valid px: 16,136 | avg: 0.041s
+    Train batch 8,000/99,368 | flow loss: 0.036409 | hidden flow: 0.160870 | valid px: 12,372 | avg: 0.041s
+    Train batch 8,500/99,368 | flow loss: 0.008576 | hidden flow: 0.048189 | valid px: 1,468 | avg: 0.041s
+    Train batch 9,000/99,368 | flow loss: 0.006938 | hidden flow: 0.266332 | valid px: 8,880 | avg: 0.041s
+    Train batch 9,500/99,368 | flow loss: 0.033852 | hidden flow: 0.051186 | valid px: 5,491 | avg: 0.041s
+    Train batch 10,000/99,368 | flow loss: 0.008405 | hidden flow: 0.094852 | valid px: 8,160 | avg: 0.041s
+    Train batch 10,500/99,368 | flow loss: 0.089443 | hidden flow: 0.117111 | valid px: 10,947 | avg: 0.041s
+    Train batch 11,000/99,368 | flow loss: 0.041471 | hidden flow: 0.051229 | valid px: 10,560 | avg: 0.041s
+    Train batch 11,500/99,368 | flow loss: 0.021513 | hidden flow: 0.066758 | valid px: 13,103 | avg: 0.041s
+    Train batch 12,000/99,368 | flow loss: 0.326893 | hidden flow: 0.776649 | valid px: 12,018 | avg: 0.041s
+    Train batch 12,500/99,368 | flow loss: 0.006913 | hidden flow: 0.327414 | valid px: 5,820 | avg: 0.041s
+    Train batch 13,000/99,368 | flow loss: 0.670882 | hidden flow: 0.670882 | valid px: 2,249 | avg: 0.041s
+    Train batch 13,500/99,368 | flow loss: 0.167829 | hidden flow: 0.168474 | valid px: 13,165 | avg: 0.041s
+    Train batch 14,000/99,368 | flow loss: 0.006826 | hidden flow: 0.024486 | valid px: 13,782 | avg: 0.041s
+    Train batch 14,500/99,368 | flow loss: 0.179573 | hidden flow: 0.179573 | valid px: 13,255 | avg: 0.041s

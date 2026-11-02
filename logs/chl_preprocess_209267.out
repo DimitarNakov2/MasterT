@@ -1,0 +1,75 @@
+Job 209267 on api, started 2026-10-29T21:51:37+00:00
+Python: /shared/home/dimitar.nakov/miniforge3/envs/chlorophyll-thesis-gpu/bin/python
+CHL: /shared/home/dimitar.nakov/MasterT/MastersThesis/data/raw_data/cmems_obs-oc_med_bgc-plankton_my_l3-multi-1km_P1D_CHL_11.54E-22.79E_35.45N-45.99N_2016-06-01-2026-06-01.nc
+BBP: /shared/home/dimitar.nakov/MasterT/MastersThesis/data/raw_data/cmems_obs-oc_med_bgc-optics_my_l3-multi-1km_P1D_BBP443_11.54E-22.79E_35.45N-45.99N_2016-06-01-2026-06-01.nc
+SST: /shared/home/dimitar.nakov/MasterT/MastersThesis/data/raw_data/SST_MED_SST_L3S_NRT_OBSERVATIONS_010_012_b_multi-vars_11.55E-22.79E_35.45N-46.00N_2016-06-01-2026-06-01.nc
+CHL variable: CHL
+BBP variable: BBP443
+SST variable: adjusted_sea_surface_temperature
+SST quality variable: quality_level
+CHL shape: (3653, 1042, 876)
+BBP shape: (3653, 1042, 876)
+SST shape: (3653, 1267, 1350)
+SST units: kelvin
+Regridding high-resolution SST to CHL grid...
+Aligned shapes:
+ CHL: (3653, 1042, 876)
+ BBP: (3653, 1042, 876)
+ SST: (3653, 1042, 876)
+ SST quality: (3653, 1042, 876)
+Ocean pixels: 470147 / 912792
+CHL missing ocean pixels: 762,037,966
+BBP443 available where CHL missing: 0.040%
+SST available where CHL missing: 40.155%
+Train days: 3136 2016-06-01 00:00:00 -> 2024-12-31 00:00:00
+Val days: 365 2025-01-01 00:00:00 -> 2025-12-31 00:00:00
+Test days: 152 2026-01-01 00:00:00 -> 2026-06-01 00:00:00
+CHL log: mean=-2.563137, std=0.799484
+BBP443 log: mean=-6.297518, std=0.597200
+SST C: mean=21.494372, std=4.778851
+Usable patches: 40
+count    40.000000
+mean      0.730809
+std       0.280744
+min       0.211243
+25%       0.463333
+50%       0.823822
+75%       0.985977
+max       1.000000
+Name: ocean_fraction, dtype: float64
+Samples per split:
+split
+test           4213
+train         99368
+validation    11695
+dtype: int64
+
+Unique target days:
+split
+test           146
+train         3123
+validation     359
+Name: date, dtype: int64
+
+Target valid fraction:
+
+Saved preprocessing files:
+ - normalization.csv
+ - ocean_mask.nc
+ - patch_index.csv
+ - preprocessing_config.json
+ - sample_index.csv
+ - temporal_fallback_analysis.csv
+
+Preprocessing completed successfully.
+High-resolution SST was quality-filtered and aligned to the CHL grid.
+No Zarr/model-data copy was created.
+Models should read the NetCDF files listed in preprocessing_config.json.
+
+Samples:
+split
+test           4213
+train         99368
+validation    11695
+dtype: int64
+Preprocessing finished 2026-10-29T21:55:17+00:00

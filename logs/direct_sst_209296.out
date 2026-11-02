@@ -1,0 +1,40 @@
+========================================
+DIRECT + SST TRAINING
+========================================
+Node: ixh
+Start: Thu Oct 29 22:51:27 UTC 2026
+
+No devices were found
+
+============================================================================
+DIRECT / CHL-A FLOW-MATCHING TRAINING
+============================================================================
+Device: cpu
+AMP: False
+Processed dir: /shared/home/dimitar.nakov/MasterT/MastersThesis/data/processed
+Model dir: /shared/home/dimitar.nakov/MasterT/MastersThesis/models/direct_sst_bbp443
+Batch size: 1
+Epochs: 200
+Learning rate: 0.0001
+AdamW betas: (0.9, 0.95)
+Weight decay: 0.0001
+Warm-up epochs: 20
+Min LR: 1e-08
+Auxiliary mode: sst_bbp443
+Auxiliary channels: 4
+
+Train samples: 99,368
+Validation samples: 11,695
+Normalization: mean=-2.563137, std=0.799484
+
+Trainable parameters: 101,539,969
+DIRECT input channels: 16
+
+Auxiliary context shape: (1, 4, 128, 128)
+Preflight output: (1, 1, 128, 128) finite=True
+
+
+============================================================================
+Epoch 001/200
+============================================================================
+Learning rate: 5e-06

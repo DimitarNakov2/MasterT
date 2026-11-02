@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/shared/home/dimitar.nakov/MasterT/MastersThesis/data/dataPrep_chl_optics_temp.py", line 240, in <module>
+    display(fallback_df[["visible_pm1_pct", "visible_pm2_pct", "visible_pm3_pct"]].describe())
+    ^^^^^^^
+NameError: name 'display' is not defined

@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/shared/home/dimitar.nakov/MasterT/MastersThesis/data/download.py", line 1, in <module>
+    import copernicusmarine
+ModuleNotFoundError: No module named 'copernicusmarine'

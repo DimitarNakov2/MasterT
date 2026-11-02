@@ -1,0 +1,34 @@
+/shared/home/dimitar.nakov/miniforge3/envs/chlorophyll-thesis-gpu/lib/python3.15/site-packages/torch/cuda/__init__.py:484: UserWarning: Found GPU0 NVIDIA B200 which is of compute capability (CC) 10.0.
+The following list shows the CCs this version of PyTorch was built for and the hardware CCs it supports:
+- 5.0 which supports hardware CC >=5.0,<6.0 except {5.3}
+- 6.0 which supports hardware CC >=6.0,<7.0 except {6.2}
+- 7.0 which supports hardware CC >=7.0,<8.0 except {7.2}
+- 7.5 which supports hardware CC >=7.5,<8.0
+- 8.0 which supports hardware CC >=8.0,<9.0 except {8.7}
+- 8.6 which supports hardware CC >=8.6,<9.0 except {8.7}
+- 9.0 which supports hardware CC >=9.0,<10.0
+Your installed torch==2.14.1+cu126 does not include kernels for this GPU. Reinstall the same version against a CUDA build that does, e.g.:
+  For CUDA 13.0 use pip install torch==2.14.1 --index-url https://download.pytorch.org/whl/cu130
+  For CUDA 13.2 use pip install torch==2.14.1 --index-url https://download.pytorch.org/whl/cu132
+  For CUDA 13.4 use pip install torch==2.14.1 --index-url https://download.pytorch.org/whl/cu134
+  _warn_unsupported_code(d, device_cc, code_ccs)
+/shared/home/dimitar.nakov/miniforge3/envs/chlorophyll-thesis-gpu/lib/python3.15/site-packages/torch/cuda/__init__.py:602: UserWarning: 
+NVIDIA B200 with CUDA capability sm_100 is not compatible with the current PyTorch installation.
+The current PyTorch install supports CUDA capabilities sm_50 sm_60 sm_70 sm_75 sm_80 sm_86 sm_90.
+If you want to use the NVIDIA B200 GPU with PyTorch, please check the instructions at https://pytorch.org/get-started/locally/
+
+  queued_call()
+Traceback (most recent call last):
+  File "/shared/home/dimitar.nakov/MasterT/MastersThesis/src/train_direct_multivar.py", line 1771, in <module>
+    main()
+    ~~~~^^
+  File "/shared/home/dimitar.nakov/MasterT/MastersThesis/src/train_direct_multivar.py", line 1386, in main
+    preflight_aux = build_auxiliary_context(
+        preflight_batch, args.aux_mode, device
+    )
+  File "/shared/home/dimitar.nakov/MasterT/MastersThesis/src/train_direct_multivar.py", line 224, in build_auxiliary_context
+    return torch.cat(channels, dim=1)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+torch.AcceleratorError: CUDA error: no kernel image is available for execution on the device
+Search for `cudaErrorNoKernelImageForDevice' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+
